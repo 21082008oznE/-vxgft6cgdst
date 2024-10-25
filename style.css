@@ -1,0 +1,79 @@
+body{
+    background-color: gray ;
+    background-size: cover; 
+    overflow: hidden;  
+
+}
+
+.container{
+    width: 200px;
+    height: 300px;
+    background: rgb(50, 50, 50);
+    position: relative;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;   
+    border-radius: 20px;
+
+}
+
+.container h2{
+    z-index: 1;
+    color: #fff;
+    font: 2rem;
+    position: relative;
+
+}
+
+.container::before{
+    content: "";
+    position: absolute;
+    width: 100px;
+    background-image: linear-gradient(rgb(0,100,255), rgb(255,45,255));
+    height: 500px;
+    animation: animado 4s linear infinite;
+    transition: all 0,1 linear;
+
+}
+
+.container::after{
+    content: "";
+    position:  absolute;
+    background-color: #b00b69;
+    inset: 4px;
+    border-radius: 20px;
+    
+}
+
+@keyframes animado{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+
+}
+
+.cartoes{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 20rem;
+    gap: 50px;
+}
+
+input{
+    position: absolute;
+}
+
+#fogo{
+    background-image: url(dorquente.gif);
+    background-size: cover;
+    background-position: center;
+    color: transparent;
+    background-clip: text;
+    transition: 2s;
+
+}
+
+#fogo:hover{
+    color: aqua;
+}
